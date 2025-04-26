@@ -1,0 +1,45 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+#app {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+hello-world {
+  grid-column: 1/6;
+  margin-bottom: 10px;
+}
+
+lit-hello-world, 
+.field {
+  grid-column: 1/4;
+  padding: 5px;
+}
+
+demo-component, 
+.columns {
+  grid-column: 4/6;
+  padding: 5px;
+}
+
+@media (max-width: 768px) {
+  #app {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  hello-world,
+  lit-hello-world,
+  .field,
+  demo-component,
+  .columns {
+    grid-column: 1/-1;
+  }
+}
